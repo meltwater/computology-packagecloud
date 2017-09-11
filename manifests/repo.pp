@@ -120,6 +120,7 @@ define packagecloud::repo(
               /(RedHat|redhat|CentOS|centos)/ => "${base_url}/${repo_name}/el/${majrel}/${::architecture}/",
               /(OracleLinux|OEL)/ => "${base_url}/${repo_name}/ol/${majrel}/${::architecture}/",
               'Scientific' => "${base_url}/${repo_name}/scientific/${majrel}/${::architecture}/",
+              default => ""
             }
             $gpg_url = "${base_url}/${repo_name}/gpgkey"
           }
